@@ -12,6 +12,7 @@ import addressRouter from "./address/adddress.routes.js";
 import couponRouter from "./coupon/coupon.routes.js";
 import cartRouter from "./cart/cart.routes.js";
 import express from "express";
+import orderRouter from "./order/order.routes.js";
 export function init(app){
   app.use("/api/v1/categories",categoryRouter);
   app.use("/api/v1/subcategories",subcategoryRouter);
@@ -24,6 +25,7 @@ export function init(app){
   app.use("/api/v1/address",addressRouter);
   app.use("/api/v1/coupon",couponRouter);
   app.use("/api/v1/cart",cartRouter);
+  app.use("/api/v1/order",orderRouter);
   app.get('/favicon.ico', (req,res) => res.status(204));
   app.use(express.static('uploads'));
   app.all('*',(req,res,next)=>{

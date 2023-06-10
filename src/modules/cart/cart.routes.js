@@ -8,4 +8,5 @@ cartRouter.route("/")
 .put(protectRoutes,cartController.updateCart)
 cartRouter.route("/:id")
 .delete(protectRoutes,cartController.deleteCartItem)
+cartRouter.get("/getAllCarts",cartController.getCarts);
 export default cartRouter;

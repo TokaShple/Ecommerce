@@ -46,6 +46,11 @@ const getCart=catchAsyncError(async(req,res,next)=>{
   let cart = await cartModel.findOne({user:req.userId});
   res.status(200).json({message:"DONE....",cart});
 })
+////////////////////get all carts
+const getCarts=catchAsyncError(async(req,res,next)=>{
+  let cart = await cartModel.find({});
+  res.status(200).json({message:"DONE....",cart});
+})
 ///////////3-delete cart
 const deleteCartItem=catchAsyncError(async(req,res,next)=>{
   let cart= await cartModel.findOneAndUpdate({user:req.userId},{$pull:{cartItems:{_id:req.params.id}}},{new:true});
@@ -65,4 +70,4 @@ const updateCart=catchAsyncError(async(req,res,next)=>{
   await isCartExist.save();
   res.status(200).json({message:"Your Cart...",isCartExist});
 })
-export{createCart,getCart,deleteCartItem,updateCart};
+export{createCart,getCart,deleteCartItem,updateCart,getCarts};
