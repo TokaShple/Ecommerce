@@ -1,6 +1,6 @@
 # Ecommerce
 Ecommerce Project 
-This is a simple social media app built using MongoDB, Express.js, and Node.js. It allows users to create posts, like and comment on posts, and authenticate using a secure login system.
+ This is a web application is built using MongoDB, Express.js, and Node.js, allowing for easy product searches and ordering. It is secure and provides a safe shopping experience.
 
 Back-End Components The back-end components of the app include:
 Node.js and Express for building the API 
